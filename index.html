@@ -24,7 +24,7 @@
     <link rel="icon" type="image/svg" href="path.svg">
 
 </head>
-    
+
 <body onload="document.body.style.opacity='1'">
     <div id=page>
         <div id=content class=site-content>
@@ -58,34 +58,37 @@
                                     <a href="https://giosjourney.com" target="_blank" class="fav fav-gios"></a>
                                     <p>GiosJourney.com <small>2019</small></p>
                                 </li>
-                                <li>
-                                    <a href="https://leeoocca.github.io/violino" target="_blank" class="fav fav-violino"></a>
-                                    <p>PON Violino <small>2019</small></p>
-                                </li>
-                                <li>
-                                    <a href="https://gardainvela.com" target="_blank" class="fav fav-gardainvela"></a>
-                                    <p>gardainvela.com <small>2018</small></p>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com/watch?v=ZaB2j2bs5qM&list=PLtq5b5tSrbeGArYtIuvkKxoH6tuwAXSPs" target="_blank" class="fav fav-io_valgo"></a>
-                                    <p>Io valgo <small>2017</small></p>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com/watch?v=mUymOcOqHdk&list=PLtq5b5tSrbeGArYtIuvkKxoH6tuwAXSPs" target="_blank" class="fav fav-donne"></a>
-                                    <p>Donne&Futuro <small>2017</small></p>
-                                </li>
-                                <li>
-                                    <a href="https://studenti.liceobagatta.it" target="_blank" class="fav fav-sb"></a>
-                                    <p>StudentiBagatta <small>since 2017</small></p>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com/watch?v=jJ1RaOzwuoI&list=PLtq5b5tSrbeGArYtIuvkKxoH6tuwAXSPs" target="_blank" class="fav fav-perche_no"></a>
-                                    <p>Perché no? <small>2016</small></p>
-                                </li>
-                                <li>
-                                    <a href="https://rocce.liceobagatta.it" target="_blank" class="fav fav-rocce"></a>
-                                    <p>Rocce del Bagatta <small>2016</small></p>
-                                </li>
+                                <span id="more" style="display: none">
+                                    <li>
+                                        <a href="https://leeoocca.github.io/violino" target="_blank" class="fav fav-violino"></a>
+                                        <p>PON Violino <small>2019</small></p>
+                                    </li>
+                                    <li>
+                                        <a href="https://gardainvela.com" target="_blank" class="fav fav-gardainvela"></a>
+                                        <p>gardainvela.com <small>2018</small></p>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/watch?v=ZaB2j2bs5qM&list=PLtq5b5tSrbeGArYtIuvkKxoH6tuwAXSPs" target="_blank" class="fav fav-io_valgo"></a>
+                                        <p>Io valgo <small>2017</small></p>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/watch?v=mUymOcOqHdk&list=PLtq5b5tSrbeGArYtIuvkKxoH6tuwAXSPs" target="_blank" class="fav fav-donne"></a>
+                                        <p>Donne&Futuro <small>2017</small></p>
+                                    </li>
+                                    <li>
+                                        <a href="https://studenti.liceobagatta.it" target="_blank" class="fav fav-sb"></a>
+                                        <p>StudentiBagatta <small>since 2017</small></p>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/watch?v=jJ1RaOzwuoI&list=PLtq5b5tSrbeGArYtIuvkKxoH6tuwAXSPs" target="_blank" class="fav fav-perche_no"></a>
+                                        <p>Perché no? <small>2016</small></p>
+                                    </li>
+                                    <li>
+                                        <a href="https://rocce.liceobagatta.it" target="_blank" class="fav fav-rocce"></a>
+                                        <p>Rocce del Bagatta <small>2016</small></p>
+                                    </li>
+                                </span>
+                                <button onclick="javascript:ShowHide('more')" id="myBtn">More</button>
                             </ul>
                             <h3>Skills</h3>
                             <ul>
@@ -118,4 +121,19 @@
             </aside>
         </footer>
     </div>
+
+    <script type="text/javascript">
+        var btnText = document.getElementById("myBtn");
+        function ShowHide(more) {
+            if (document.getElementById(more).style.display == 'none') {
+                document.getElementById(more).style.display = 'block';
+                document.getElementById(more).style.opacity = '1';
+                 btnText.innerHTML = "Less";
+            } else {
+                document.getElementById(more).style.display = 'none';
+                document.getElementById(more).style.opacity = '0';
+                btnText.innerHTML = "More";
+            }
+        }
+    </script>
 </body>
