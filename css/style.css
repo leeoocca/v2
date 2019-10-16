@@ -431,8 +431,8 @@ body {
 
 @media screen and (prefers-color-scheme:light) {
     body {
-        background-color: #fff;
-        color: #000
+        background-color: var(--color-text-default);
+        color: var(--color-background)
     }
 }
 
