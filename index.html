@@ -18,6 +18,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora|Lato&display=swap" rel="stylesheet">
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -32,8 +33,8 @@
                 <main>
                     <article class="entry">
                         <header class=entry-header>
-                            <img src="path.svg" style="width: 100px;" class="intro-img">
-                            <h1 style="" class="intro-title">I’m Leonardo<br>— a languages student from Italy.</h1>
+                            <img src="path.svg" style="width: 100px;" class="intro-img" style="fill: var(--color-text-default)">
+                            <h1 class="intro-title">I’m <span class="yellow">L</span>eonardo<br>— a languages student from Italy.</h1>
                         </header>
 
                         <div class="entry-content">
@@ -90,29 +91,37 @@
                                 </span>
                                 <button onclick="javascript:ShowHide('more')" id="myBtn">More</button>
                             </ul>
-                            <h3>Skills</h3>
-                            <ul>
-                                <li>Photography</li>
-                                <li>Videomaking</li>
-                                <li>Web &amp; Graphic Design</li>
-                            </ul>
                         </div>
                     </article>
                 </main>
             </section>
         </div>
         <footer id=colophon class=site-footer>
-
             <aside class=widget-area role=complementary aria-label=Footer>
                 <div class="widget-column">
                     <section class="widget widget_nav_menu">
-                        <div class=menu-menu-container>
-                            <ul id=menu-menu class=menu>
-                                <li id=menu-item-16 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16">
-                                    <a href=mailto:leeoocca@gmail.com>drop me an email</a>
+                        <div>
+                            <ul>
+                                <li>
+                                    <a href=mailto:leeoocca@gmail.com>Email</a>
                                 </li>
-                                <li id=menu-item-16 class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16">
-                                    <a href="https://www.imdb.com/name/nm9344156/">IMDb</a>
+                                <li>
+                                    <a href="https://www.facebook.com/leeoocca/" style="color:#1877f2">Facebook</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.twitter.com/leeoocca/" style="color:#1da1f2">Twitter</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/leo.rocca/" style="color:#c32aa3">Instagram</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/leeoocca/" style="color:#007bb5">LinkedIn</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/playlist?list=PLtq5b5tSrbeGArYtIuvkKxoH6tuwAXSPs" style="color:#b2071d">YouTube</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.imdb.com/name/nm9344156/" style="color:#f3ce13">IMDb</a>
                                 </li>
                             </ul>
                         </div>
@@ -124,16 +133,18 @@
 
     <script type="text/javascript">
         var btnText = document.getElementById("myBtn");
+
         function ShowHide(more) {
             if (document.getElementById(more).style.display == 'none') {
                 document.getElementById(more).style.display = 'block';
                 document.getElementById(more).style.opacity = '1';
-                 btnText.innerHTML = "Less";
+                btnText.innerHTML = "Less";
             } else {
                 document.getElementById(more).style.display = 'none';
                 document.getElementById(more).style.opacity = '0';
                 btnText.innerHTML = "More";
             }
         }
+
     </script>
 </body>
